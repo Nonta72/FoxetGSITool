@@ -66,7 +66,6 @@ for partition in $partitions; do
         else
             sudo mount "UnpackedROMs/$partition.img" "UnpackedROMs/temp_mount"
         fi
-        # Cambio aquí: usar rsync en vez de cp -r para evitar Killed por falta de RAM
         rsync -a "UnpackedROMs/temp_mount/". "UnpackedROMs/$partition/"
         sudo umount -R "UnpackedROMs/temp_mount"
     fi
