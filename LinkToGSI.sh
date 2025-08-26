@@ -66,7 +66,7 @@ for partition in $partitions; do
         else
             sudo mount "UnpackedROMs/$partition.img" "UnpackedROMs/temp_mount"
         fi
-        rsync -a "UnpackedROMs/temp_mount/". "UnpackedROMs/$partition/"
+        cp -r "UnpackedROMs/temp_mount/". "UnpackedROMs/$partition/"
         sudo umount -R "UnpackedROMs/temp_mount"
     fi
 done
