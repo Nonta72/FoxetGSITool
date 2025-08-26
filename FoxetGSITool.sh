@@ -53,8 +53,8 @@ if [ -z "$SDK_VERSION" ] || ! [[ "$SDK_VERSION" =~ ^[0-9]+$ ]]; then
 fi
 
 case "$SDK_VERSION" in
-  33)
-    android_version="13"
+  35)
+    android_version="15"
     ;;
   *)
     echo "Error: Unsupported SDK version $SDK_VERSION"
